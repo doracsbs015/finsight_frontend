@@ -47,28 +47,34 @@ const Row3 = () => {
   // Styled DataGrid Box (text fixed to light color)
   const gridBoxSx = {
   "& .MuiDataGrid-root": {
-    backgroundColor: palette.background.default, // dashboard background
+    backgroundColor: palette.background.default,
     border: "none",
     fontSize: 14,
-    color: "#fff", // all row text white
+    color: "#fff",
   },
   "& .MuiDataGrid-cell": {
     borderBottom: `1px solid ${palette.divider} !important`,
-    color: "#fff", // row values text white
+    color: "#fff",
   },
   "& .MuiDataGrid-columnHeaders": {
     borderBottom: `1px solid ${palette.divider} !important`,
-    backgroundColor: "#fff", // <-- column header background white
-    color: "#000", // <-- column header text black
+    backgroundColor: "#fff",
+    color: "#000",
     fontWeight: 600,
   },
   "& .MuiDataGrid-columnSeparator": {
     visibility: "hidden",
   },
-  "& .MuiDataGrid-row:hover": {
-    backgroundColor: "#3b3b3b", // subtle hover
+  "& .MuiDataGrid-row": {
+    "&:hover": {
+      backgroundColor: "rgba(255, 255, 255, 0.1)", // light overlay
+    },
+  },
+  "& .MuiDataGrid-row.Mui-selected": {
+    backgroundColor: "rgba(255, 255, 255, 0.15) !important", // selected row slightly stronger
   },
 };
+
 
   return (
     <>
@@ -110,8 +116,12 @@ const Row3 = () => {
           <Box height="15px" bgcolor={blue[600]} borderRadius="1rem" width="40%" />
         </Box>
         <Typography margin="0 1rem" variant="h6">
-          Orci aliquam enim vel diam. Venenatis euismod id donec mus lorem etiam ullamcorper odio sed. Ipsum non sed gravida etiam urna egestas molestie volutpat et. Malesuada quis pretium aliquet lacinia ornare sed. In volutpat nullam at est id cum pulvinar nunc.
-        </Typography>
+  This dashboard provides a snapshot of your business performance. 
+  View key metrics such as revenue, expenses, profits, and operational trends. 
+  Predictions using ML help forecast future trends based on historical data, 
+  enabling smarter decision-making.
+</Typography>
+
       </DashboardBox>
     </>
   );

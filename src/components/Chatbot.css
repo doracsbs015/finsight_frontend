@@ -13,7 +13,7 @@
 }
 
 .chatbot-modal {
-  background: #f4f4f5; /* soft gray */
+  background: #cacad4; /* soft gray */
   border-radius: 20px;
   width: 600px;
   max-width: 90%;
@@ -66,7 +66,7 @@
   margin-bottom: 12px;
   padding: 12px;
   border-radius: 16px;
-  background: #ffffff;
+  background: #c8c3c3;
   border: 1px solid #e0d7f8;
   scrollbar-width: thin;
   scrollbar-color: #d63384 #f5f5f5;
